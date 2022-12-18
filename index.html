@@ -38,20 +38,20 @@
 				<span class="login100-form-title p-b-41">
 					Admin Login
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5" action="home.html">
+				<form class="login100-form validate-form p-b-33 p-t-5" id="login_div">
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Admin email" required>
+						<input class="input100" type="text" name="username" placeholder="Admin email" id="email_fild" required>
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Admin password" required>
+						<input class="input100" type="password" name="pass" placeholder="Admin password" id="pass_fild" required>
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn" id="submitData">
+						<button class="login100-form-btn" id="submitData" onclick="login()">
 							Login
 						</button>
 					</div>
@@ -65,10 +65,13 @@
 	<div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->	
+<script src="Auth.js"></script>
 <script type="module">
+
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+  import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
  // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -94,7 +97,7 @@
   
   var email = document.getElementById()
   
-  createUserWithEmailAndPassword(auth, email, password)
+  signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -103,7 +106,7 @@
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    // ..
+	alert(errorMessage);
   });
   
   })
