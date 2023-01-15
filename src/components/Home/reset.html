@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Password Reset</title>
+      <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="../../css/reset.css">
+      <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css"></link>
+      <link rel="icon" type="image/png" href="/images/icons/favicon.ico"/>
+      <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+      <script src="./reset.js"></script>   
+  </head>
+  <body>
+      <main>
+        <section class="container reset-container">
+            <h1>Reset Password</h1>
+          <fieldset>
+            <div>
+              <img src="../../images/reset.svg">
+            </div>
+            <div>
+              <label for="mail">Admin Email</label> <br>
+              <input type="email" id="mail" name="mail" required />
+            </div>
+            <button type="button" id="resetPassword" onclick="resetPasswordFunction();">Confirm</button>
+          </fieldset>
+      </section>
+      <div class="feedbackContainer success">
+        <div class="feedbackIcon"></div>
+        <p class="feedbackMessage">Signed up Successfully</p>
+      </div>
+      <div class="feedbackContainer failure">
+        <div class="feedbackIcon"></div>
+        <p class="feedbackMessage">Signing up failed</p>
+      </div>
+    </main> 
+  </body>
+</html>
