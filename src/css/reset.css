@@ -59,9 +59,9 @@ button {
     float: right;
     margin: 20px 47px 0px 0px;
     padding: 10px 20px;
-    border: 1px solid #2196f3;
+    border: 1px solid #50B2CC;
     float: right;
-    background-color: #2196f3;
+    background-color: #50B2CC;
     color: white;
     
 }
@@ -69,8 +69,7 @@ button {
 #resetPassword:hover {
     text-decoration: underline;
     cursor: pointer;
-    border: 2px solid #2196f3;
-
+    border: 2px solid #50B2CC;
 }
 
 .container div {
