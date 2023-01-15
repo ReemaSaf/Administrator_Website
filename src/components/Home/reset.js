@@ -4,7 +4,7 @@ const resetPassword = document.getElementById('resetPassword');
 const successModal = document.querySelector('.success');
 const failureModal = document.querySelector('.failure');
 
-const resetPasswordFunction = (
+const resetPasswordFunction = ()=> {
     alert("J");
     const email = mailField.value;
     auth.setPasswordResetEmail(email)
@@ -14,7 +14,9 @@ const resetPasswordFunction = (
     .catch(error => {
         console.error(error);
        })
-)
+}
+
+
 
 //Animations
 mailField.addEventListener('focus', () => {
