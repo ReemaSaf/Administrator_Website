@@ -8,8 +8,9 @@ import { getFirestore, doc, getDocs, collection, updateDoc } from '@firebase/fir
 import { initializeApp } from "firebase/app";
 import firebaseConfig from '../Firebase/firebase.config';
 import { ThreeDotLoader } from '../ThreeDotLoader/ThreeDotLoader';
-import '../../spinner.css';
-
+import '../../spinner.css';      //the main source of the code was W3Shoole website and stackOoerflow.
+                                 //for reading and writing from DB we use firebase website.
+                                //Also we use react which is JavaScript library for building user interfaces.
 export const Availability = () => {
     const navigate = useNavigate();
     const { logOut } = useAuth()
@@ -30,21 +31,21 @@ export const Availability = () => {
     console.log(stationList);
     console.log(station)
     const getDocsData = async () => {
-        const colRef = collection(db, typeOfStation);
-        const docsSnap = await getDocs(colRef);
+        const colRef = collection(db, typeOfStation); //choosing the type of stations(bus/metro) 
+        const docsSnap = await getDocs(colRef);     //and send it to DB to get the list of stations
         const dockData = docsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         setInitialLoading(false);
         setStationList(dockData);
     }
 
-    const updateFireStoreData = async (e) => {
+    const updateFireStoreData = async (e) => { //when choosing a station from list and change its availabilty
         e.preventDefault()
         setLoading(true);
         const docRef = doc(db, typeOfStation, station);
         await updateDoc(docRef, {
-            Available: availavility === 'true' ? true : false
+            Available: availavility === 'true' ? true : false //updating succefully?
         }).then(() => {
-            alert('Updated successfully.');
+            alert('Updated successfully.'); //system send feedback
             setAvailavility(false);
             setLoading(false);
         })
@@ -103,7 +104,8 @@ export const Availability = () => {
                     <div className="inner-wrap">
                         <select
                             defaultValue={stationList?.find(s => s.id === station)?.OnTime ? 'true' : 'false'}
-                            name="availability" id="availability" required onClick={({ target }) => setAvailavility(target.value)}>
+                            name="availability" id="availability" required onClick={({ target }) => setAvailavility(target.value) //updating status
+                            }>
                             <option value="" disabled selected> </option>
                             <option value={true}
                                 selected={

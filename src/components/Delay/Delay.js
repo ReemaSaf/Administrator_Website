@@ -11,9 +11,9 @@ import { ThreeDotLoader } from '../ThreeDotLoader/ThreeDotLoader';
 // import 'react-toastify/dist/ReactToastify.css';
 import '../../spinner.css';
 export const Delay = () => {
-    const navigate = useNavigate();
-    const { logOut } = useAuth();
-
+    const navigate = useNavigate();              //the main source of the code was W3Shoole website and stackOoerflow.
+    const { logOut } = useAuth();                //for reading and writing from DB we use firebase website.
+                                                 //Also we use react which is JavaScript library for building user interfaces.
     const [stationList, setStationList] = React.useState([]);
     const [station, setStation] = React.useState('Bus_1');
     const [timeSchedule, setTimeSchedule] = React.useState(false);
@@ -75,15 +75,17 @@ export const Delay = () => {
                     </nav>
                 </section>
                 <main>
-
+                                    
                     <div className="Add_form">
                         <h1>Announce Delay</h1>
-                        <form onSubmit={updateFireStoreData}>
+                        <form onSubmit={  //code for updating the database after submision
+                            updateFireStoreData}>
                             <div className="section"><span className="num">1</span>
                                 List Of Bus Stations
                             </div>
                             <div className="inner-wrap">
-                                <select name="" id="" required onClick={({ target }) => setStation(target.value)} >
+                                <select name="" id="" required onClick={({ target }) => setStation(target.value)//read stations from DB
+                                } >
                                     <option value="" disabled selected>Select your option</option>
                                     {
                                         stationList.map((station, index) => (<option key={index} value={station.id} >
@@ -97,7 +99,9 @@ export const Delay = () => {
                             <div className="inner-wrap">
                                 <select
                                     defaultValue={stationList?.find(s => s.id === station)?.OnTime ? 'true' : 'false'}
-                                    name="services" id="services" required onChange={({ target }) => setTimeSchedule(target.value)} >
+                                    name="services" id="services" required onChange={({ target }) => setTimeSchedule(target.value) 
+                                    //Read the states of the chosen station and print here
+                                    } >
                                     <option value=""  selected disabled> </option>
                                     <option value="true"
                                         selected={
@@ -107,8 +111,9 @@ export const Delay = () => {
                                     <option value="false"
                                         selected={
                                             stationList?.find(s => s.id === station)?.OnTime ? false : true
+                                            //from line 105 till end for changing the states and reflict on DB
                                         }
-                                    >Delayed</option>
+                                    >Delayed</option> 
                                 </select>
                             </div>
 
@@ -118,6 +123,7 @@ export const Delay = () => {
                                 <br />
                                 {
                                     loading ? <ThreeDotLoader /> : <input type="submit" value="Announce" />
+                                    //Styling the button
                                 }
 
                                 <br />

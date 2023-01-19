@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import bg from '../../images/bg-01.jpg'
 import '../../css/main.css'
 import '../../css/util.css'
 import '../../images/icons/._favicon.ico'
 import useAuth from '../hooks/useAuth'
 import { useLocation, useNavigate } from 'react-router';
-import { ThreeDots } from 'react-loader-spinner';
-
-export const Login = () => {
+import { ThreeDots } from 'react-loader-spinner';      
+                                                //the main source of the code was W3Shoole.com and geeksforgeeks.org
+export const Login = () => {                       
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { signInWithEmailPassword } = useAuth();
@@ -55,10 +56,11 @@ export const Login = () => {
                                 <input className="input100" type="password" value={password} onChange={({ target }) => setPassword(target.value)} name="password" placeholder="Admin password" id="pass_fild" required />
                                 <span className="focus-input100" data-placeholder="🔒"></span>
                             </div>
-
-                               <a id="reset" href="./reset.js">I forgot my password</a>
+                            <br/>
+                            <a id="reset" href='../Reset/reset.html' > Forgot your password? </a>
+                            <Link to="/Reset">Home</Link> 
+                            <br/>
                             <div className="container-login100-form-btn m-t-32">
-                                
                                 <button className="login100-form-btn" id="submitData" style={{
                                     cursor: loader ? 'not-allowed' : 'pointer'
                                 }} >
@@ -79,15 +81,17 @@ export const Login = () => {
                                     }
                                 </button>
                             </div>
+                         
 
                         </form>
+                  
                     </div>
                 </div>
             </div>
 
 
             <div id="dropDownSelect1"></div>
-            <script src="./reset.js"></script>
+            <script src="../Reset/reset.js"></script>
         </>
     )
 }

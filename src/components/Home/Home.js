@@ -5,9 +5,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 export const Home = () => {
     const navigate = useNavigate();
-    const { logOut } = useAuth()
-    return (
-        <div>
+    const { logOut } = useAuth()                      //the main source of the code was W3Shoole.com and geeksforgeeks.org
+    return (                                          //and
+        <div>                                            
 
             <section className="header_req">`
                 <nav>
