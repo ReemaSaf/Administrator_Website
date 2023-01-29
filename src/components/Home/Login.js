@@ -58,7 +58,6 @@ export const Login = () => {
                             </div>
                             <br/>
                             <a id="reset" href='../Reset/reset.html' > Forgot your password? </a>
-                            <Link to="/Reset">Home</Link> 
                             <br/>
                             <div className="container-login100-form-btn m-t-32">
                                 <button className="login100-form-btn" id="submitData" style={{
