@@ -73,16 +73,6 @@ fieldset, .feedbackContainer {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.12)
 }
 
-input[type = "email"] {
-    width: 340px;
-    margin-top: 8px;
-    padding: 2px 6px;
-    border: none;
-    background-color: #f7f7f7;
-    height: 40px;
-    outline-color: #2196f3;
-    font-size: 1rem
-}
 
 button {
     float: right;
@@ -98,12 +88,19 @@ button {
     text-transform: uppercase;
     display: block;
 }
-#mail{
+#email_fild1{
     font-family: Ubuntu-Bold;
     line-height: 1.2;
-    text-align: center;
     text-transform: uppercase;
     display: block;
+    font-size: 1rem;
+    width: 340px;
+    margin-top: 8px;
+    padding: 2px 6px;
+    height: 40px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
 }
 #resetPassword:hover {
     cursor: pointer;
@@ -120,7 +117,7 @@ button {
     background: linear-gradient(left, #50B2CC, #273A69, #273A69);
     position: relative;
     z-index: 1;
-  
+
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;

@@ -48,7 +48,7 @@ export const Login = () => {
                         <form className="login100-form validate-form p-b-33 p-t-5" id="login_div" onSubmit={handleSubmit}>
 
                             <div className="wrap-input100 validate-input" data-validate="Enter username">
-                                <input className="input100" type="text" value={email} onChange={({ target }) => setEmail(target.value)} name="email" placeholder="Admin email" id="email_fild" required />
+                                <input className="input100" type="text" value={email} onChange={({ target }) => setEmail(target.value)} name="email" placeholder="Admin email" id="mail_fild" required />
                                 <span className="focus-input100" data-placeholder="👤"></span>
                             </div>
 
@@ -57,7 +57,7 @@ export const Login = () => {
                                 <span className="focus-input100" data-placeholder="🔒"></span>
                             </div>
                             <br/>
-                            <a id="reset" href='../Reset/reset.html' > Forgot your password? </a>
+                            <a id="reset" onClick={()=>navigate('./reset')} > Forgot your password? </a>
                             <br/>
                             <div className="container-login100-form-btn m-t-32">
                                 <button className="login100-form-btn" id="submitData" style={{

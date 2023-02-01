@@ -1,0 +1,25 @@
+[debug] [2023-02-01T21:26:41.373Z] ----------------------------------------------------------------------
+[debug] [2023-02-01T21:26:41.375Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-02-01T21:26:41.376Z] CLI Version:   11.22.0
+[debug] [2023-02-01T21:26:41.376Z] Platform:      win32
+[debug] [2023-02-01T21:26:41.376Z] Node Version:  v18.12.1
+[debug] [2023-02-01T21:26:41.378Z] Time:          Thu Feb 02 2023 00:26:41 GMT+0300 (Arabian Standard Time)
+[debug] [2023-02-01T21:26:41.378Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-01T21:26:41.483Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-01T21:26:41.484Z] > authorizing via signed-in user (reemaalsaif1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\Downloads\files\AdministratorSite
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

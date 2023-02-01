@@ -8,6 +8,7 @@ import { Login } from './components/Home/Login';
 import { createContext } from 'react';
 import useCaseFirebase from "./components/Firebase/useCaseFirebase";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ResetPassword from './components/Reset/ResetPassword';
 
 export const collectionContext = createContext()
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/delay" element={<PrivateRoute><Delay /></PrivateRoute>} />
           <Route path="/availavility" element={<PrivateRoute><Availability /></PrivateRoute>} />
           <Route path="/login" element={<Login />} />
+          <Route path="login/reset" element={<ResetPassword />} />
           <Route path='*' element={<div>Page Not Found</div>}
           />
         </Routes>
